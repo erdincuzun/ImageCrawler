@@ -6,7 +6,7 @@ It is enough to prepare the rule file and say hello crawler:)
 
 ##Rule File
 Simply enter the following information in the Rule file. You can use CSS selectors for HTML element selection. Let's start:
-
+```json
 {
    "project_name": "EnterYourProjectName",
    "web_site": "https://urlofWebsite/",
@@ -61,7 +61,10 @@ Simply enter the following information in the Rule file. You can use CSS selecto
       }
    ]
 }
-
+```
+An example:
+```json
+```
 This file needs to be adjusted according to the website. You may not want unnecessary links and sections by using the CSS selector here. Let's start the crawler now.
 
 
