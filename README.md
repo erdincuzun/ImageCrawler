@@ -4,7 +4,7 @@ This crawler downloads the images and extracts features from these images for us
 # Usage
 It is enough to prepare the rule file and say hello crawler:)
 
-##Rule File
+## Rule File
 Simply enter the following information in the Rule file. You can use CSS selectors for HTML element selection. Let's start:
 ```json
 {
@@ -125,5 +125,15 @@ An example:
 ```
 This file needs to be adjusted according to the website. You may not want unnecessary links and sections by using the CSS selector here. Let's start the crawler now.
 
+## Hello crawler...
 
+Examine the hello_crawler.py file.
 
+```python
+import crawler as cr 
+
+#one rule file, no thread
+cr.crawler('rules_20minutos-es.json')
+```
+
+You can start several rule files with thread at the same time.
