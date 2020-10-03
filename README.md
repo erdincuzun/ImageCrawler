@@ -64,6 +64,64 @@ Simply enter the following information in the Rule file. You can use CSS selecto
 ```
 An example:
 ```json
+{
+   "project_name": "20minutos",
+   "web_site": "https://www.20minutos.es/",
+   "seeds": [
+	  "https://www.20minutos.es/nacional/7/",
+	  "https://www.20minutos.es/nacional/6/",
+	  "https://www.20minutos.es/nacional/5/",
+	  "https://www.20minutos.es/nacional/4/",
+	  "https://www.20minutos.es/nacional/3/",
+	  "https://www.20minutos.es/nacional/2/"
+   ],
+   "type": "selenium:lxml",
+   "wait": 1,
+   "browser": "chrome",
+   "driver": "drivers/chromium/chromedriver.exe",
+   "result_file": "output.text",
+   "sitemap": [
+      {
+         "page": "Mainpage",
+         "detection": {
+            "url": "nacional/"
+         },
+         "data_extraction": [{
+               "parent_layout": "*",
+               "extraction_rules": [
+                  {
+                     "name": "Image",
+                     "selector": "img"
+                  }
+               ]
+            }],
+         "link_extraction": [
+			{
+               "parent_layout": "header h1",
+               "selector": "a"
+            }
+         ]
+      },
+      {
+         "page": "Datapage",
+         "detection": {
+            "url": "noticia/"
+         },
+         "data_extraction": [
+            {
+               "parent_layout": "*",
+               "extraction_rules": [
+                  {
+                     "name": "Image",
+                     "selector": "img"
+                  }
+               ]
+            }
+         ],
+         "link_extraction": []
+      }
+   ]
+}
 ```
 This file needs to be adjusted according to the website. You may not want unnecessary links and sections by using the CSS selector here. Let's start the crawler now.
 
