@@ -137,3 +137,8 @@ cr.crawler('rules_20minutos-es.json')
 ```
 
 You can start several rule files with thread at the same time.
+
+## ML_experiments
+We create the training and testing datasets for predicting relevant images from web pages. <a href="https://adys.nku.edu.tr/Datasets/RelevantImageDatasets.zip" target="_blank">Click</a> for downloading these files. 
+
+The ML_experiments directory has codes for heuristic prediction and scikit-learn and machine learning predictions.
